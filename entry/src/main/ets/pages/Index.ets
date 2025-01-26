@@ -1,3 +1,5 @@
+import WindowManager from '../utils/WindowManager'
+import home from './home/index'
 @Entry
 @Component
 struct Index {
@@ -12,7 +14,7 @@ struct Index {
       Tabs({barPosition:BarPosition.End,controller:this.tabController}){
         // 微信
         TabContent(){
-
+          home()
         }.tabBar(this.createTabMenu(0))
         // 通讯录
         TabContent(){
@@ -27,6 +29,16 @@ struct Index {
 
         }.tabBar(this.createTabMenu(3))
       }
+      .width("100%")
+      .height("100%")
+      .barHeight('65vp')
+      .backgroundColor("#f4f4f4")
+      .vertical(false)
+      .layoutWeight(1)
+      .padding({ bottom: WindowManager.navBarHeight })
+      .onChange((index: number) => {
+        this.currentIndex = index
+      })
     }
   }
   @Builder
