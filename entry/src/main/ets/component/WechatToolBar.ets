@@ -14,7 +14,6 @@ export default struct WechatToolbar {
           .fontColor(Color.Black)
           .fontSize(19)
           .fontWeight(500)
-
         Row() {
           Image($r("app.media.ic_search"))
             .width(22)
@@ -36,7 +35,6 @@ export default struct WechatToolbar {
         .width("100%")
         .alignItems(VerticalAlign.Center)
         .justifyContent(FlexAlign.End)
-
       }
       .width("100%")
       .height(53)

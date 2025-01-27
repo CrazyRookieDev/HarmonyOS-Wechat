@@ -1,6 +1,7 @@
 import router from '@ohos.router'
 import ListChatItem, { ChatItemData } from '../../component/chatListItem'
 import WechatToolbar from '../../component/WechatToolBar'
+import WindowManager from '../../utils/WindowManager'
 
 @Preview
 @Component
@@ -107,5 +108,6 @@ export default struct Home {
     .width("100%")
     .height("100%")
     .backgroundColor("#f0f0f0")
+    .padding({bottom:WindowManager.navBarHeight+WindowManager.statusBarHeight})
   }
 }

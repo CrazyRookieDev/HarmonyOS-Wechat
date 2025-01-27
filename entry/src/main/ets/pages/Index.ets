@@ -1,5 +1,9 @@
 import WindowManager from '../utils/WindowManager'
 import home from './home/index'
+import contact from './contact/index'
+import find from './find/index'
+import mine from './mine/index'
+
 @Entry
 @Component
 struct Index {
@@ -18,15 +22,15 @@ struct Index {
         }.tabBar(this.createTabMenu(0))
         // 通讯录
         TabContent(){
-
+          contact()
         }.tabBar(this.createTabMenu(1))
         // 发现
         TabContent(){
-
+          find()
         }.tabBar(this.createTabMenu(2))
         // 我的
         TabContent(){
-
+          mine()
         }.tabBar(this.createTabMenu(3))
       }
       .width("100%")
